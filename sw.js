@@ -1,5 +1,15 @@
+const staticAssets = [
+    './',
+    './style.css',
+    './app.js'
+];
+
+
+
+
 self.addEventListener('install', event => {
-    console.log('install');
+    const cache = await cache.open('final-static');
+    cache.addAll(staticAssets);
 });
 
 self.addEventListener('fetch', event => {
