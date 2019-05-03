@@ -14,7 +14,7 @@ self.addEventListener('install', async event => {
 
 self.addEventListener('fetch', event => {
     const req = event.request;
-    event.respndWith(cacheFirst(req));
+    event.respondWith(cacheFirst(req));
 });
 
 async function cacheFirst(req) {
