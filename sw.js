@@ -8,7 +8,7 @@ const staticAssets = [
 
 
 self.addEventListener('install', event => {
-    const cache = await cache.open('final-static');
+    const cache = await caches.open('final-static');
     cache.addAll(staticAssets); 
 });
 
